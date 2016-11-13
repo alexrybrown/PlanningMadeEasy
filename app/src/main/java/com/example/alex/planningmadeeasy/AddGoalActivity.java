@@ -37,6 +37,8 @@ public class AddGoalActivity extends AppCompatActivity {
             final DBTools dbTools = new DBTools(this);
             final User user = dbTools.getUser(username);
             LinearLayout ll = (LinearLayout) findViewById(R.id.enter_goal);
+            LinearLayout ll2 = (LinearLayout) findViewById(R.id.enter_new_goals);
+            ll2.removeView(ll2.getChildAt(0));
             if(originalIntent.getLongExtra(GoalAcitivity.SINGLE_GOAL, 0) != 0) {
                 Button parentGoal = new Button(this);
                 parentGoal.setText(dbTools.getGoal(originalIntent.getLongExtra(GoalAcitivity.SINGLE_GOAL, 0), dbTools.getUser(username)).message);
@@ -104,6 +106,13 @@ public class AddGoalActivity extends AppCompatActivity {
                     ll.addView(childGoal);
                 }
             }
+
+            lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+            EditText parentGoal = new EditText(this);
+            parentGoal.setHint("Enter Sub Goal");
+            parentGoal.setLayoutParams(lp);
+            ll = (LinearLayout) findViewById(R.id.enter_new_goals);
+            ll.addView(parentGoal);
 
         } else {
             LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
@@ -182,7 +191,7 @@ public class AddGoalActivity extends AppCompatActivity {
                 dbTools.insertGoal(goal);
             }
         } else {
-            parentGoal = dbTools.getParentGoal(originalIntent.getLongExtra(GoalAcitivity.SINGLE_GOAL, 0), user);
+            parentGoal = dbTools.getGoal(originalIntent.getLongExtra(GoalAcitivity.SINGLE_GOAL, 0), user);
 
             // Create sub goals
             Goal goal;

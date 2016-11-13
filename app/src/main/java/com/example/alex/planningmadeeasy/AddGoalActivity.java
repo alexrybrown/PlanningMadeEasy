@@ -96,8 +96,12 @@ public class AddGoalActivity extends AppCompatActivity {
                         @Override
                         public void onClick(View view) {
                             ArrayList<Goal> childGoals = dbTools.getGoals(goal);
+                            long[] goalKeys = new long[childGoals.size()];
+                            for(int i = 0; i < childGoals.size(); ++i) {
+                                goalKeys[i] = childGoals.get(i).goalKey;
+                            }
                             Intent finalIntent = new Intent(AddGoalActivity.this, AddGoalActivity.class);
-                            finalIntent.putExtra(GoalAcitivity.GOALS, childGoals);
+                            finalIntent.putExtra(GoalAcitivity.GOALS, goalKeys);
                             finalIntent.putExtra(GoalAcitivity.SINGLE_GOAL, goal.goalKey);
                             finalIntent.putExtra(LoginActivity.USER, username);
                             startActivity(finalIntent);

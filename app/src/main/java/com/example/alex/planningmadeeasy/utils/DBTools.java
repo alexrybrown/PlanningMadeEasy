@@ -16,7 +16,7 @@ import java.util.ArrayList;
 
 public class DBTools extends SQLiteOpenHelper {
 
-    private final static String DATABASE_NAME = "PlanningMadeEasy8.db";
+    private final static String DATABASE_NAME = "PlanningMadeEasy10.db";
     private final static int DATABSAE_VERSION = 1;
 
     public static final String TABLE_GOALS = "goals";

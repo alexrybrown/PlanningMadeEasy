@@ -52,6 +52,7 @@ public class GoalAcitivity extends AppCompatActivity {
                     for(int i = 0; i < goals.size(); ++i) {
                         goalKeys[i] = goals.get(i).goalKey;
                     }
+                    intent.putExtra(LoginActivity.USER, username);
                     intent.putExtra(SINGLE_GOAL, GOAL.goalKey);
                     intent.putExtra(GOALS, goalKeys);
                     startActivity(intent);

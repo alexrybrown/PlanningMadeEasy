@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Planning Made Easy</string>
+
+    <!-- Strings related to login -->
+    <string name="confirm_registry">Email not found. You want to create a new user with that email and password?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="updating_report">Update report</string>
+    <string name="action_register">Register</string>
+    <string name="prompt_user">Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="error_invalid_user">This username is invalid</string>
+    <string name="error_invalid_password_short">This password is too short</string>
+    <string name="error_invalid_password_required">A password is required</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <!-- Strings related to registration -->
+    <string name="first_name_hint">Enter your first name</string>
+    <string name="last_name_hint">Enter your last name</string>
+    <string name="email_hint">Enter your email</string>
+    <string name="username_hint">Enter your username</string>
+    <string name="password_hint">Enter your password</string>
+    <string name="reenter_password_hint">Reenter your password</string>
+    <string name="empty_first_name">Please provide a first name</string>
+    <string name="empty_last_name">Please provide a last name</string>
+    <string name="invalid_email">Please provide a valid email</string>
+    <string name="empty_username">Please provide a username</string>
+    <string name="non_unique_username">Username taken please provide another</string>
+    <string name="empty_password">Please provide a password</string>
+    <string name="empty_reenter_password">Please retype your password</string>
+    <string name="invalid_password">Password do not match</string>
+    <string name="submit_registraion_button">Submit</string>
+
+    <!-- Strings related to goals -->
+    <string name="add_new_goal">Add New Goal</string>
+    <string name="enter_goal">Enter Primary Goal</string>
+    <string name="enter_sub_goal">Enter Sub Goal</string>
+    <string name="add_sub_goal">Add Sub Goal</string>
+    <string name="remove_sub_goal">Remove Sub Goal</string>
+    <string name="submit_goals">Submit Goals</string>
+    <string name="goal_submission_error">A goal must have a value</string>
+</resources>
